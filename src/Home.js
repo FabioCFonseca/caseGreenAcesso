@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useCharacters } from './service/api';
 import Card from './components/Card';
-import { CardGrid } from './components/CardGrid';
+import { CardGrid } from './components/CardGrid'; 
 
 const Home = () => {
   const { data, isLoading, isError } = useCharacters();
@@ -53,7 +53,7 @@ const Home = () => {
 
       <CardGrid>
         {currentItems.map((item) => (
-          <Card key={item.id} name={item.name} image={item.image} />
+          <Card key={item.id} name={item.name} image={item.image} status={item.status} species={item.species} />
         ))}
       </CardGrid>
 
