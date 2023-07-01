@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import backgroundImage from './bg.jpg';
+import Cardi from './styles/blocks/Cardi';
 
 const client = new QueryClient();
 

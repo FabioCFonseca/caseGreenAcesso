@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useCharacters } from './service/api';
-import Card from './components/Card';
-import { CardGrid } from './components/CardGrid'; 
+import Cardi from './styles/blocks/Cardi';
 
 const Home = () => {
   const { data, isLoading, isError } = useCharacters();
@@ -51,11 +50,16 @@ const Home = () => {
         />
       </div>
 
-      <CardGrid>
+      <Cardi.Grid>
         {currentItems.map((item) => (
-          <Card key={item.id} name={item.name} image={item.image} status={item.status} species={item.species} />
+             <Cardi key={item.id}>
+               <Cardi.Image src={item.image}/> 
+               <Cardi.Title>{item.name}</Cardi.Title>
+               <Cardi.Specs>{item.species}</Cardi.Specs>
+               <Cardi.Specs>{item.status}</Cardi.Specs>
+             </Cardi>
         ))}
-      </CardGrid>
+      </Cardi.Grid>
 
       <div>
         {/* Render pagination buttons */}
