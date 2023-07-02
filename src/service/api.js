@@ -17,11 +17,10 @@ export const fetchData = async () => {
   console.log('Fetched')
   console.log(responseData);
   return responseData;
-};
-
+}
 
 export const useCharacters = () => {
     return useQuery('Characters', fetchData, {
         staleTime: 600000, // 10 minutes (in milliseconds)
-      });
-  };
+      })
+  }
