@@ -14,8 +14,6 @@ export const fetchData = async () => {
       throw new Error('Failed to fetch data from the API.');
     }
   }
-  console.log('Fetched')
-  console.log(responseData);
   return responseData;
 }
 

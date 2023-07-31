@@ -1,43 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
 
-const Button = styled.button`
-  padding: 8px 16px;
-  margin-right: 4px;
-  background-color: ${props => (props.active ? '#007bff' : '#fff')};
-  color: ${props => (props.active ? '#fff' : '#000')};
-  border: 1px solid #ccc;
-  cursor: pointer;
+const Pagination = ({ data, currentPage, handlePageChange }) => {
+  const itensPerPage = 9
+  const totalPages = Math.ceil(data.length / itensPerPage)
 
-  &:hover {
-    background-color: ${props => (props.disabled ? '#fff' : '#e9ecef')};
+  const paginationBar = () => {    
+    const pages = []
+    const pages2 = ['First', 'Previous', 'Next', 'Last']
+
+    const handlePageClick = (i) => {
+      handlePageChange(currentPage = i)
+    }
+
+    for (let i = 1; i <= totalPages; i++ ) {
+       pages.push(
+        <li key={i}><button onClick={() => handlePageClick(i)}>{i}</button>{i}</li>
+       )
+     }
+
+  const displayRange = 3;
+  const startIndex = Math.max(0, currentPage - displayRange - 1);
+  const endIndex = Math.min(pages.length - 1, currentPage + displayRange - 1);
+
+  const pages3 = pages.slice(startIndex, endIndex + 1);
+
+    pages2.splice(2, 0, ...pages3) 
+
+    return pages2
   }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
-`;
-
-const PaginationContainer = styled.div`
-  margin-top: 16px;
-`;
-
-const Pagination = ({ totalPages, currentPage, onPageChange }) => {
 
   return (
-    <PaginationContainer>
-      {Array.from({ length: totalPages }, (_, index) => (
-        <Button
-          key={index + 1}
-          onClick={() => onPageChange(index + 1)}
-          active={currentPage === index + 1}
-          disabled={currentPage === index + 1}
-        >
-          {index + 1}
-        </Button>
-      ))}
-    </PaginationContainer>
+    <>
+      <h1>PAGINATION</h1>
+      <div>{paginationBar()}</div> 
+    </>
   );
 };
 
