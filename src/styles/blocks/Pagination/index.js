@@ -4,12 +4,23 @@ const Pagination = ({ data, currentPage, handlePageChange }) => {
   const itensPerPage = 9
   const totalPages = Math.ceil(data.length / itensPerPage)
 
+  const createPageButton = (label, page) => (
+    <button key={label} onClick={() => handlePageChange(page)}>
+      {label}
+    </button>
+  );
+
   const paginationBar = () => {    
     const pages = []
-    const pages2 = ['First', 'Previous', 'Next', 'Last']
+    const pages2 = [
+      createPageButton('First', 1),
+      createPageButton('Previous', currentPage - 1),
+      createPageButton('Next', currentPage + 1),
+      createPageButton('Last', totalPages),
+    ]
 
     const handlePageClick = (i) => {
-      handlePageChange(currentPage = i)
+      handlePageChange(i)
     }
 
     for (let i = 1; i <= totalPages; i++ ) {
@@ -24,16 +35,13 @@ const Pagination = ({ data, currentPage, handlePageChange }) => {
 
   const pages3 = pages.slice(startIndex, endIndex + 1);
 
-    pages2.splice(2, 0, ...pages3) 
+  pages2.splice(2, 0, ...pages3) 
 
     return pages2
   }
 
   return (
-    <>
-      <h1>PAGINATION</h1>
       <div>{paginationBar()}</div> 
-    </>
   );
 };
 
