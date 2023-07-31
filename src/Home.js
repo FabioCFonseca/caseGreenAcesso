@@ -5,7 +5,7 @@ import Pagination from './styles/blocks/Pagination';
 import SearchInput from './styles/blocks/Search';
 
 const Home = () => {
-  const { data, isLoading, isError } = useCharacters(); //API Data
+  const { data, isLoading, isError } = useCharacters()  
   const [currentPage, setCurrentPage] = useState(1)
   
   if (isLoading) {
