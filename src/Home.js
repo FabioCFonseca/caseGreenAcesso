@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useCharacters } from './service/api';
-import Cardi from './styles/blocks/Cardi';
 import Pagination from './styles/blocks/Pagination';
-import SearchInput from './styles/blocks/Search';
+import Card from './styles/blocks/Cardi/Card';
 
 const Home = () => {
   const { data, isLoading, isError } = useCharacters()  
@@ -16,7 +15,7 @@ const Home = () => {
     return <div>Error fetching data</div>;
   }
 
-  const itensPerPage = 9
+  const itensPerPage = 6
   const startIndex = (currentPage - 1) * itensPerPage
   const endIndex = startIndex + itensPerPage
   const paginatedData = data.slice(startIndex, endIndex) 
@@ -27,21 +26,7 @@ const Home = () => {
 
   return (
     <div>
-      <SearchInput
-      currentPage={currentPage}
-      onPageChange={handlePageChange}
-      />
-      <Cardi.Grid>
-        {paginatedData.map((item) => (
-             <Cardi key={item.id}>
-               <Cardi.Image src={item.image}/> 
-               <Cardi.Title>{item.name}</Cardi.Title>
-               <Cardi.Specs>{item.species}</Cardi.Specs>
-               <Cardi.Specs>{item.status}</Cardi.Specs>
-               <Cardi.Button to={`/details/${item.id}`}></Cardi.Button>
-             </Cardi>
-        ))}
-      </Cardi.Grid>
+      <Card paginatedData={paginatedData} />
       <Pagination
         data={data}
         currentPage={currentPage}
