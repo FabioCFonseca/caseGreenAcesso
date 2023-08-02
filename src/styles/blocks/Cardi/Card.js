@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const CardContainer = styled.div`
   display: grid;
@@ -15,7 +16,7 @@ const CardBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end; /* Align contents to the bottom of the card body */
+  justify-content: center; /* Center contents both vertically and horizontally */
   border: 2px solid #ccc;
   position: relative;
   height: 200px;
@@ -37,7 +38,7 @@ const Title = styled.h2`
   margin: 8px 0;
 `;
 
-const Button = styled.button`
+const Button = styled(Link)`
   padding: 8px 16px;
   background-color: #800080;
   color: #fff;
@@ -45,11 +46,16 @@ const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  bottom: 0;
+  left: 0; /* Align the button to the left */
+  position: absolute;
+  margin: 0 10px;
+  margin-bottom: 5px;
 
   &:hover {
     background-color: #600060;
   }
-`;
+  `;
 
 const Card = ({ paginatedData }) => {
   return (
@@ -58,7 +64,7 @@ const Card = ({ paginatedData }) => {
         <CardBody key={item.id}>
           <Image src={item.image} />
           <Title>{item.name}</Title>
-          <Button to={`/details/${item.id}`}>View Details</Button>
+          <Button to={`/details/${item.id}`}>Details</Button>
         </CardBody>
       ))}
     </CardContainer>
