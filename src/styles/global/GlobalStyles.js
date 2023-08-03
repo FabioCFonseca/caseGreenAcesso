@@ -7,8 +7,12 @@ const GlobalStyles = createGlobalStyle`
     font-family: Arial, sans-serif;
     color: red;
     text-align: center;
-    background-color: grey;
+    background-color: #043F47;
   }
 `;
 
 export default GlobalStyles;
+
+//backgroung color: #043F47
+//yellow: #C0D16D
+//blue: #0C7D85
