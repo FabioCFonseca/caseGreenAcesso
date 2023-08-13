@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { AiOutlineHeart } from 'react-icons/ai';
+import { useSelector, useDispatch } from 'react-redux';
+import rootReducer from '../../../redux/rootReducer';
 
 const CardContainer = styled.div`
   display: grid;
@@ -13,11 +15,10 @@ const CardContainer = styled.div`
 `;
 
 const CardBody = styled.div`
-  /* Styles for the card body */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center contents both vertically and horizontally */
+  justify-content: center; 
   border: 3px solid #C0D16D;
   border-radius: 8px;
   position: relative;
@@ -39,8 +40,8 @@ const Image = styled.img`
 const Title = styled.h2`
   font-size: 20px;
   margin: 8px 0;
-  font-family: 'Roboto', sans-serif; /* Use Roboto font */
-  color: white; /* Set text color to white */
+  font-family: 'Roboto', sans-serif; 
+  color: white; 
 `;
 
 const Button = styled(Link)`
@@ -52,7 +53,7 @@ const Button = styled(Link)`
   cursor: pointer;
   transition: background-color 0.3s ease;
   bottom: 0;
-  left: 0; /* Align the button to the left */
+  left: 0; 
   position: absolute;
   margin: 0 10px;
   margin-bottom: 5px;
@@ -66,29 +67,34 @@ const Button = styled(Link)`
   }
   `;
 
-// const HeartIconWrapper = styled.div`
-// position: absolute;
-// bottom: 1px;
-// right: 10px;
-// color: white; /* Adjust the color as needed */
-// font-size: 30px;
-
-// `;
-
 const HeartIcon = styled(AiOutlineHeart)`
   position: absolute;
   bottom: 5px;
   right: 10px;
-  color: white; /* Adjust the color as needed */
+  color: white; 
   font-size: 32px;
 
-  /* Apply the hover effect to the outline */
+  
   &:hover {
-    color: #C0D16D; /* Change color on hover */
+    color: #C0D16D; 
   }
 `;
 
+
 const Card = ({ paginatedData }) => {
+  const { currentFavorites } = useSelector(state => state.favoritesReducer)
+  const dispatch = useDispatch()
+  console.log(currentFavorites)
+  
+
+  const handleFavorite = ( characterObject ) => {
+    
+    dispatch({
+      type: 'favorites/toggleFavorite',
+      payload: { characterObject }
+    })
+  }
+
   return (
     <CardContainer>
       {paginatedData.map((item) => (
@@ -96,7 +102,12 @@ const Card = ({ paginatedData }) => {
           <Image src={item.image} />
           <Title>{item.name}</Title>
           <Button to={`/details/${item.id}`}>Details</Button>
-          <HeartIcon />
+          <HeartIcon
+           onClick={() => handleFavorite(item)}
+           style={{
+            backgroundColor: currentFavorites.some(favoriteItem => favoriteItem.id === item.id) ? '#C0D16D' : 'white'
+  }}
+/>
         </CardBody>
       ))}
     </CardContainer>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCharacters } from './service/api';
 import Pagination from './styles/blocks/Pagination';
 import Card from './styles/blocks/Cardi/Card';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const { data, isLoading, isError } = useCharacters()  
@@ -27,6 +28,7 @@ const Home = () => {
   return (
     <div>
       <Card paginatedData={paginatedData} />
+      <Link to="/favorites">Go to Favorites</Link>
       <Pagination
         data={data}
         currentPage={currentPage}
