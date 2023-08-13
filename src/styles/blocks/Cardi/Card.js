@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { AiOutlineHeart } from 'react-icons/ai';
+import { AiFillHeart } from 'react-icons/ai';
 import { useSelector, useDispatch } from 'react-redux';
 import rootReducer from '../../../redux/rootReducer';
 
@@ -67,7 +67,7 @@ const Button = styled(Link)`
   }
   `;
 
-const HeartIcon = styled(AiOutlineHeart)`
+const HeartIcon = styled(AiFillHeart)`
   position: absolute;
   bottom: 5px;
   right: 10px;
@@ -105,7 +105,7 @@ const Card = ({ paginatedData }) => {
           <HeartIcon
            onClick={() => handleFavorite(item)}
            style={{
-            backgroundColor: currentFavorites.some(favoriteItem => favoriteItem.id === item.id) ? '#C0D16D' : 'white'
+            color: currentFavorites.some(favoriteItem => favoriteItem.id === item.id) ? '#C0D16D' : 'white'
   }}
 />
         </CardBody>
