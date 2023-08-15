@@ -11,7 +11,7 @@ const PaginationContainer = styled.div`
 
 const Button = styled.button`
   padding: 5px 10px;
-  background-color: ${props => (props.current ? 'red' : '#f0f0f0')};
+  background-color: ${props => (props.current ? '#F9F871' : '#f0f0f0')};
   border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
@@ -42,11 +42,15 @@ const Pagination = ({ data, currentPage, handlePageChange }) => {
 
   return (
     <PaginationContainer>
-      <Button onClick={() => handlePageChange(1)}>First</Button>
-      <Button onClick={() => handlePageChange(currentPage - 11)}> -10</Button>
+      <Button onClick={() => handlePageChange(1)} disabled={currentPage === 1}>
+        First
+      </Button>
+      <Button onClick={() => handlePageChange(Math.max(1, currentPage - 10))}>-10</Button>
       {pages}
-      <Button onClick={() => handlePageChange(currentPage + 10)}>+10</Button>
-      <Button onClick={() => handlePageChange(totalPages)}>Last</Button>
+      <Button onClick={() => handlePageChange(Math.min(totalPages, currentPage + 10))}>+10</Button>
+      <Button onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages}>
+        Last
+      </Button>
     </PaginationContainer>
   );
 };

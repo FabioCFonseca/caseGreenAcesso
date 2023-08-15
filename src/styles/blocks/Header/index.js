@@ -6,6 +6,12 @@ import logo from '../../../logo.png'
 const PageCOntainer = styled.div`
   background-color: black;
   height: 100px;
+  background-color: black;
+  height: 100px;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 100; 
 `;
 
 const HeaderContainer = styled.header`
@@ -15,7 +21,6 @@ const HeaderContainer = styled.header`
   flex-direction: row;
   justify-content: space-between; 
   align-items: center;
-  border: 2px solid white;
   margin: auto 75px;
 `;
 

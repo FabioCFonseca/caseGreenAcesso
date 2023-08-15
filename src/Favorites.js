@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './styles/blocks/Cardi/Card';
+import Card from './styles/blocks/Card/Card';
 import { useSelector } from 'react-redux';
 
 const Favorites = () => {
