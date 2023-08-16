@@ -4,11 +4,15 @@ import { useSelector } from 'react-redux';
 
 const Favorites = () => {
   const favoriteItems = useSelector(state => state.favoritesReducer.currentFavorites);
+  const pageReference = 'favorites characters'
 
   return (
     <div>
       <h1>Favorites</h1>
-      <Card paginatedData={favoriteItems} />
+      <Card 
+      paginatedData={favoriteItems}
+      pageReference={pageReference}
+/>
     </div>
   )
 }

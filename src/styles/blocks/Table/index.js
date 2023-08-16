@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const StyledTableContainer = styled.div`
+  width: 1020px; /* Set the container width */
+  margin: 150px auto; /* Center the container */
+
+`;
+
 const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
@@ -9,8 +15,14 @@ const StyledTable = styled.table`
 
 const StyledTableRow = styled.tr`
   &:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #0C7D85;
   }
+
+  &:nth-child(odd) {
+    background-color: #407772;
+  }
+
+  color: white;
 `;
 
 const StyledTableHeader = styled.th`
@@ -34,8 +46,15 @@ const StyledTableLink = styled.a`
 
 const CharacterDetails = ({ character }) => {
   return (
+    <StyledTableContainer>
     <StyledTable>
       <tbody>
+      <StyledTableRow>
+          <StyledTableHeader>Image</StyledTableHeader>
+          <StyledTableData>
+            <img src={character.image} alt={character.name} width="100" />
+          </StyledTableData>
+        </StyledTableRow>
         <StyledTableRow>
           <StyledTableHeader>ID</StyledTableHeader>
           <StyledTableData>{character.id}</StyledTableData>
@@ -68,14 +87,10 @@ const CharacterDetails = ({ character }) => {
             </StyledTableLink>
           </StyledTableData>
         </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>Image</StyledTableHeader>
-          <StyledTableData>
-            <img src={character.image} alt={character.name} width="100" />
-          </StyledTableData>
-        </StyledTableRow>
+        
       </tbody>
     </StyledTable>
+    </StyledTableContainer>
   );
 };
 

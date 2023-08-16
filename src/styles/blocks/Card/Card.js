@@ -10,12 +10,12 @@ const CardContainer = styled.div`
   gap: 128px;
   width: 1020px;
   margin: auto;
-  margin-top: 250px;
+  margin-top: 120px;
 `;
 
 const CardBody = styled.div`
   display: flex;
-  flex-direction: column;.
+  flex-direction: column;
   align-items: center;
   justify-content: center; 
   border: 3px solid #C0D16D;
@@ -79,8 +79,36 @@ const HeartIcon = styled(AiFillHeart)`
   }
 `;
 
+const NoCharactersMessage = styled.div`
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  height: 200px;
+`;
 
-const Card = ({ paginatedData }) => {
+const ListTitle = styled.div`
+  width: 1020px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto 20px; /* Horizontal auto margin, bigger vertical margin */
+  font-size: 24px;
+  color: white;
+`;
+
+const HorizontalLine = styled.div`
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin-left: 10px;
+`;
+
+
+const Card = ({ paginatedData, pageReference }) => {
   const { currentFavorites } = useSelector(state => state.favoritesReducer)
   const dispatch = useDispatch()
   console.log(currentFavorites)
@@ -94,7 +122,16 @@ const Card = ({ paginatedData }) => {
     })
   }
 
+  if (paginatedData.length === 0) {
+    return <NoCharactersMessage>No characters found</NoCharactersMessage>;
+  }
+
   return (
+    <>
+    <ListTitle>
+        List of {pageReference}
+        <HorizontalLine />
+      </ListTitle>
     <CardContainer>
       {paginatedData.map((item) => (
         <CardBody key={item.id}>
@@ -110,6 +147,7 @@ const Card = ({ paginatedData }) => {
         </CardBody>
       ))}
     </CardContainer>
+    </>
   );
 };
 
