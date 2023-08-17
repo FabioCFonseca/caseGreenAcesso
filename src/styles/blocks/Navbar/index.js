@@ -44,7 +44,7 @@ const FavoritesButton = styled(Link)`
 `;
 
 
-const Header = () => {
+const Navbar = () => {
   return (
     <PageCOntainer>
     <HeaderContainer>
@@ -59,4 +59,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

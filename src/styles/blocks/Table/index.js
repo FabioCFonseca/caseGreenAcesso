@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledTableContainer = styled.div`
-  width: 1020px; /* Set the container width */
-  margin: 150px auto; /* Center the container */
-
+const TableWrapper = styled.div`
+  width: inherit;
+  margin: 50px auto;
 `;
 
 const StyledTable = styled.table`
-  width: 100%;
+  margin: 0 auto;
+  width: 70%;
   border-collapse: collapse;
   border: 1px solid #ddd;
+  border-radius: 8px;
 `;
 
 const StyledTableRow = styled.tr`
@@ -25,17 +26,12 @@ const StyledTableRow = styled.tr`
   color: white;
 `;
 
-const StyledTableHeader = styled.th`
-  padding: 8px;
-  border: 1px solid #ddd;
-`;
-
 const StyledTableData = styled.td`
   padding: 8px;
   border: 1px solid #ddd;
 `;
 
-const StyledTableLink = styled.a`
+const StyledText = styled.span`
   color: blue;
   text-decoration: underline;
 
@@ -44,53 +40,50 @@ const StyledTableLink = styled.a`
   }
 `;
 
+const StyledImage = styled.img`
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 0 auto 16px;
+`;
+
 const CharacterDetails = ({ character }) => {
   return (
-    <StyledTableContainer>
-    <StyledTable>
-      <tbody>
-      <StyledTableRow>
-          <StyledTableHeader>Image</StyledTableHeader>
-          <StyledTableData>
-            <img src={character.image} alt={character.name} width="100" />
-          </StyledTableData>
-        </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>ID</StyledTableHeader>
-          <StyledTableData>{character.id}</StyledTableData>
-        </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>Name</StyledTableHeader>
-          <StyledTableData>{character.name}</StyledTableData>
-        </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>Status</StyledTableHeader>
-          <StyledTableData>{character.status}</StyledTableData>
-        </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>Species</StyledTableHeader>
-          <StyledTableData>{character.species}</StyledTableData>
-        </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>Gender</StyledTableHeader>
-          <StyledTableData>{character.gender}</StyledTableData>
-        </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>Origin</StyledTableHeader>
-          <StyledTableData>{character.origin.name}</StyledTableData>
-        </StyledTableRow>
-        <StyledTableRow>
-          <StyledTableHeader>Location</StyledTableHeader>
-          <StyledTableData>
-            <StyledTableLink href={character.location.url} target="_blank" rel="noopener noreferrer">
-              {character.location.name}
-            </StyledTableLink>
-          </StyledTableData>
-        </StyledTableRow>
-        
-      </tbody>
-    </StyledTable>
-    </StyledTableContainer>
+    <TableWrapper>
+      <StyledImage src={character.image} alt={character.name} />
+      <StyledTable>
+        <tbody>
+          <StyledTableRow>
+            <StyledTableData>ID</StyledTableData>
+            <StyledTableData>{character.id}</StyledTableData>
+          </StyledTableRow>
+          <StyledTableRow>
+            <StyledTableData>Name</StyledTableData>
+            <StyledTableData>{character.name}</StyledTableData>
+          </StyledTableRow>
+          <StyledTableRow>
+            <StyledTableData>Status</StyledTableData>
+            <StyledTableData>{character.status}</StyledTableData>
+          </StyledTableRow>
+          <StyledTableRow>
+            <StyledTableData>Species</StyledTableData>
+            <StyledTableData>{character.species}</StyledTableData>
+          </StyledTableRow>
+          <StyledTableRow>
+            <StyledTableData>Gender</StyledTableData>
+            <StyledTableData>{character.gender}</StyledTableData>
+          </StyledTableRow>
+          <StyledTableRow>
+            <StyledTableData>Origin</StyledTableData>
+            <StyledTableData>{character.origin.name}</StyledTableData>
+          </StyledTableRow>
+          <StyledTableRow>
+            <StyledTableData>Location</StyledTableData>
+            <StyledTableData>{character.location.name}</StyledTableData>
+          </StyledTableRow>
+        </tbody>
+      </StyledTable>
+    </TableWrapper>
   );
 };
 

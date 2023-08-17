@@ -2,24 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-const SearchContainer = styled.div`
-  text-align: center;
-  margin-top: 120px;
-`;
-
 const SearchInputWrapper = styled.div`
   position: relative;
-  display: inline-block;
+  width: inherit;
 `;
 
 const SearchInput = styled.input`
-  padding: 8px 30px 8px 10px;
+  box-sizing: border-box;
   font-size: 16px;
   border-radius: 5px;
-  width: 1000px;
   background-color: #407772;
   color: lightgrey;
   border: none;
+  width: 100%;
+  padding: 3px 5px;
+  outline: none; 
   
   ::placeholder {
     color: lightgrey;
@@ -29,9 +26,10 @@ const SearchInput = styled.input`
 const SearchIcon = styled(AiOutlineSearch)`
   position: absolute;
   top: 50%;
-  right: 10px; /* Adjusted to be on the far right */
+  right: 5px; 
   transform: translateY(-50%);
   color: lightgrey;
+  pointer-events: none; 
 `;
 
 const Search = ({ handlePageChange, handleSearch }) => {
@@ -41,16 +39,14 @@ const Search = ({ handlePageChange, handleSearch }) => {
   };
 
   return (
-    <SearchContainer>
-      <SearchInputWrapper>
-        <SearchInput
-          type="text"
-          placeholder="Find a character"
-          onChange={handleSearchChange}
-        />
-        <SearchIcon />
-      </SearchInputWrapper>
-    </SearchContainer>
+    <SearchInputWrapper>
+      <SearchInput
+        type="text"
+        placeholder="Find a character"
+        onChange={handleSearchChange}
+      />
+      <SearchIcon />
+    </SearchInputWrapper>
   );
 };
 

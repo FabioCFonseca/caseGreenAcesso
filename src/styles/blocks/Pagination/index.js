@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const PaginationContainer = styled.div`
+const PaginationWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@ const Pagination = ({ data, currentPage, handlePageChange }) => {
   }
 
   return (
-    <PaginationContainer>
+    <PaginationWrapper>
       <Button onClick={() => handlePageChange(1)} disabled={currentPage === 1}>
         First
       </Button>
@@ -51,7 +51,7 @@ const Pagination = ({ data, currentPage, handlePageChange }) => {
       <Button onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages}>
         Last
       </Button>
-    </PaginationContainer>
+    </PaginationWrapper>
   );
 };
 
