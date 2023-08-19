@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <QueryClientProvider client={client}>
       <BrowserRouter>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Container>
           <Routes>
             <Route path="/" element={<Home />} />

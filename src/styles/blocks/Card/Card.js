@@ -8,8 +8,15 @@ const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 96px;
-  width: inherit;
-  margin-top: 100px;
+  margin: 100px auto 0px;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 96px; 
+    width: 60%;
+    padding: 0px 20px;
+  }
+
 `;
 
 const CardBody = styled.div`
@@ -22,6 +29,7 @@ const CardBody = styled.div`
   position: relative;
   height: 200px;
   background-color:#0C7D85;
+
 `;
 
 const Image = styled.img`
@@ -82,12 +90,16 @@ const NoCharactersMessage = styled.div`
 `;
 
 const ListTitle = styled.div`
-  width: 1020px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 50px auto 20px; 
   font-size: 24px;
+
+  @media (max-width: 480px) {
+    margin: 50px 0 0;
+    padding: 0 20px;
+  }
 `;
 
 const HorizontalLine = styled.div`

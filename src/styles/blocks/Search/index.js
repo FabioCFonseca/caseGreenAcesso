@@ -5,6 +5,10 @@ import { AiOutlineSearch } from 'react-icons/ai';
 const SearchInputWrapper = styled.div`
   position: relative;
   width: inherit;
+
+  @media (max-width: 480px) {
+    padding: 0 20px;
+  }
 `;
 
 const SearchInput = styled.input`
