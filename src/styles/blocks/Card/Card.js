@@ -8,15 +8,19 @@ const CardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 96px;
-  margin: 100px auto 0px;
+  margin-top: 100px;
 
+  @media (min-width: 481px) and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 96px;
+    margin-top: 80px;
+  }
+  
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
     gap: 96px; 
-    width: 60%;
-    padding: 0px 20px;
+    margin-top: 80px;
   }
-
 `;
 
 const CardBody = styled.div`
@@ -28,8 +32,7 @@ const CardBody = styled.div`
   border-radius: 8px;
   position: relative;
   height: 200px;
-  background-color:#0C7D85;
-
+  background-color: var(--secondaryBlue);
 `;
 
 const Image = styled.img`
@@ -41,11 +44,6 @@ const Image = styled.img`
   top: -75px;
   left: 50%;
   transform: translateX(-50%);
-`;
-
-const Title = styled.h2`
-  font-size: 20px;
-  margin: 8px 0; 
 `;
 
 const Button = styled(Link)`
@@ -66,7 +64,7 @@ const Button = styled(Link)`
   &:hover {
     background-color: #C0D16D;
   }
-  `;
+`;
 
 const HeartIcon = styled(AiFillHeart)`
   position: absolute;
@@ -93,12 +91,10 @@ const ListTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px auto 20px; 
-  font-size: 24px;
+  margin-top: 50px; 
 
   @media (max-width: 480px) {
-    margin: 50px 0 0;
-    padding: 0 20px;
+    padding: 0px 40px;
   }
 `;
 
@@ -112,7 +108,6 @@ const HorizontalLine = styled.div`
 const Card = ({ paginatedData, pageReference }) => {
   const { currentFavorites } = useSelector(state => state.favoritesReducer)
   const dispatch = useDispatch()
-  console.log(currentFavorites)
   
   const handleFavorite = ( characterObject ) => {
     dispatch({
@@ -122,30 +117,30 @@ const Card = ({ paginatedData, pageReference }) => {
   }
 
   if (paginatedData.length === 0) {
-    return <NoCharactersMessage>No characters found</NoCharactersMessage>;
+    return <NoCharactersMessage><h3>No characters found</h3></NoCharactersMessage>;
   }
 
   return (
     <>
-    <ListTitle>
-        List of {pageReference}
+      <ListTitle>
+        <h1>List of {pageReference}</h1>
         <HorizontalLine />
       </ListTitle>
-    <CardWrapper>
-      {paginatedData.map((item) => (
-        <CardBody key={item.id}>
-          <Image src={item.image} />
-          <Title>{item.name}</Title>
-          <Button to={`/details/${item.id}`}>Details</Button>
-          <HeartIcon
-           onClick={() => handleFavorite(item)}
-           style={{
-            color: currentFavorites.some(favoriteItem => favoriteItem.id === item.id) ? '#C0D16D' : 'white'
-  }}
-/>
-        </CardBody>
-      ))}
-    </CardWrapper>
+      <CardWrapper>
+        {paginatedData.map((item) => (
+          <CardBody key={item.id}>
+            <Image src={item.image} />
+            <h2>{item.name}</h2>
+            <Button to={`/details/${item.id}`}>Details</Button>
+            <HeartIcon
+              onClick={() => handleFavorite(item)}
+              style={{
+                color: currentFavorites.some(favoriteItem => favoriteItem.id === item.id) ? '#C0D16D' : 'white'
+              }}
+            />
+          </CardBody>
+        ))}
+      </CardWrapper>
     </>
   );
 };

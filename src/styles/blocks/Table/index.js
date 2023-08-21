@@ -54,32 +54,32 @@ const CharacterDetails = ({ character }) => {
       <StyledTable>
         <tbody>
           <StyledTableRow>
-            <StyledTableData>ID</StyledTableData>
-            <StyledTableData>{character.id}</StyledTableData>
+            <StyledTableData><h3>ID</h3></StyledTableData>
+            <StyledTableData><p>{character.id}</p></StyledTableData>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableData>Name</StyledTableData>
-            <StyledTableData>{character.name}</StyledTableData>
+            <StyledTableData><h3>Name</h3></StyledTableData>
+            <StyledTableData><p>{character.name}</p></StyledTableData>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableData>Status</StyledTableData>
-            <StyledTableData>{character.status}</StyledTableData>
+            <StyledTableData><h3>Status</h3></StyledTableData>
+            <StyledTableData><p>{character.status}</p></StyledTableData>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableData>Species</StyledTableData>
-            <StyledTableData>{character.species}</StyledTableData>
+            <StyledTableData><h3>Species</h3></StyledTableData>
+            <StyledTableData><p>{character.species}</p></StyledTableData>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableData>Gender</StyledTableData>
-            <StyledTableData>{character.gender}</StyledTableData>
+            <StyledTableData><h3>Gender</h3></StyledTableData>
+            <StyledTableData><p>{character.gender}</p></StyledTableData>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableData>Origin</StyledTableData>
-            <StyledTableData>{character.origin.name}</StyledTableData>
+            <StyledTableData><h3>Origin</h3></StyledTableData>
+            <StyledTableData><p>{character.origin.name}</p></StyledTableData>
           </StyledTableRow>
           <StyledTableRow>
-            <StyledTableData>Location</StyledTableData>
-            <StyledTableData>{character.location.name}</StyledTableData>
+            <StyledTableData><h3>Location</h3></StyledTableData>
+            <StyledTableData><p>{character.location.name}</p></StyledTableData>
           </StyledTableRow>
         </tbody>
       </StyledTable>

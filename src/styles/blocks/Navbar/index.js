@@ -1,37 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';  
-import logo from '../../../logo.png'
+import { Link } from 'react-router-dom';
+import logo from '../../../logo.png';
 
-const PageCOntainer = styled.div`
-  background-color: black;
-  height: 100px;
-  background-color: black;
-  height: 100px;
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-  z-index: 100; 
-`;
 
-const HeaderContainer = styled.header`
-  color: #fff;
-  height: inherit;
-  display: flex;  
-  flex-direction: row;
-  justify-content: space-between; 
+const ContainerWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  margin: auto 75px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1000;
+  background-color: black;
 `;
 
 const Logo = styled.img`
-  height: 70px; 
+  height: 70px;
+  padding: 0 40px;
 `;
 
-const FavoritesButton = styled(Link)` 
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+const FavoritesButton = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   color: #000;
   padding: 8px 8px;
@@ -43,19 +38,22 @@ const FavoritesButton = styled(Link)`
   height: 25px;
 `;
 
+const ButtonsWrapper = styled.div`
+  padding: 0 40px;
+`;
 
 const Navbar = () => {
   return (
-    <PageCOntainer>
-    <HeaderContainer>
-      
-      <Link to="/"> 
-        <Logo src={logo} alt='Logo' />
+    <ContainerWrapper>   
+      <Link to="/">
+        <Logo src={logo} alt="Logo" />
       </Link>
-      
-      <FavoritesButton to='/favorites'>Favorites</FavoritesButton>
-    </HeaderContainer>
-    </PageCOntainer>
+      <ButtonsWrapper>
+        <FavoritesButton to="/favorites">Favorites</FavoritesButton>
+      </ButtonsWrapper>
+      </ContainerWrapper>
+
+    
   );
 };
 

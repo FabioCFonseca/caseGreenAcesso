@@ -3,12 +3,9 @@ import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 const SearchInputWrapper = styled.div`
+  display: flex;
+  align-items: center;
   position: relative;
-  width: inherit;
-
-  @media (max-width: 480px) {
-    padding: 0 20px;
-  }
 `;
 
 const SearchInput = styled.input`
@@ -18,7 +15,7 @@ const SearchInput = styled.input`
   background-color: #407772;
   color: lightgrey;
   border: none;
-  width: 100%;
+  flex: 1; 
   padding: 3px 5px;
   outline: none; 
   
@@ -30,7 +27,7 @@ const SearchInput = styled.input`
 const SearchIcon = styled(AiOutlineSearch)`
   position: absolute;
   top: 50%;
-  right: 5px; 
+  right: 10px; /* Adjust as needed */
   transform: translateY(-50%);
   color: lightgrey;
   pointer-events: none; 

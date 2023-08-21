@@ -5,7 +5,6 @@ import Home from './Home';
 import Details from './Details';
 import Navbar from './styles/blocks/Navbar';
 import Favorites from './Favorites';
-import Container from './styles/Container';
 
 const client = new QueryClient();
 
@@ -14,14 +13,12 @@ function App() {
     <div className="App">
       <QueryClientProvider client={client}>
       <BrowserRouter>
-        {/* <Navbar/> */}
-        <Container>
+        <Navbar/>  
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/details/:id" element={<Details />} />
             <Route path="/favorites" element={<Favorites />} />
           </Routes>
-          </Container>
         </BrowserRouter>  
       </QueryClientProvider>
     </div>

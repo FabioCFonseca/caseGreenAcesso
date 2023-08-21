@@ -1,15 +1,34 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
+
+  :root{
+    --primaryBlue: #043F47;
+    --secondaryBlue: #0C7D85;
+
+  }
+
   body {
-    margin: 0 0;
-    padding: 0 0;
+
+    //RESETS
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+    //FONT
     font-family: 'Roboto', sans-serif;
     color: white;
-    text-align: center;
-    background-color: #043F47;
-    box-sizing: border-box;
-  }
+    background-color: var(--primaryBlue);
+
+    //LAYOUT
+    margin: 130px auto 0;
+    max-width: 1200px;
+    padding: 0 40px;
+
+ 
+  } 
+  
 `;
 
 export default GlobalStyles;
