@@ -1,15 +1,18 @@
-# Rick and Morty API 
+# Rick and Morty API
 
-# Sobre o projeto
+## Sobre o projeto
 
-https://..****
+[Project Link](https://..****)
 
 Sobre...
 
 ## Layout mobile
-# Home page
-![home1](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/2be401c8-8df0-477c-affc-0432c84ae78d)
 
+### Home page
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/2be401c8-8df0-477c-affc-0432c84ae78d" alt="home1" width="45%">
+  <img src="https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/71d7eeff-35cf-4a34-b6da-60160ee762f9" alt="home2" width="45%">
+</div>
 
 # Favorites page
 ![favorites](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/d7d1ee39-dc27-414a-89ae-20391da7c21e)
