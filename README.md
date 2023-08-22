@@ -15,10 +15,10 @@ Sobre...
 </div>
 
 # Favorites page
-![favorites](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/d7d1ee39-dc27-414a-89ae-20391da7c21e)
+![favorites](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/427b536a-f97e-4dbb-af61-679b9700f466)
 
 # Details page
-![details](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/ea99dc14-b58e-46c7-8ce9-bae376e257e8)
+![details](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/73dacbe5-b7e1-456d-a236-a89ce7cef564)
 
 ## Layout web
 ![Capturar](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/fed0f580-e8ca-4f8d-aa04-05b2c18a7efc)
