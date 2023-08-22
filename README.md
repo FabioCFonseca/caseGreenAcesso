@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-[Project Link][([https://..****](https://rick-and-morty-api-75fd9.web.app/])](https://rick-and-morty-api-75fd9.web.app/)
+(https://rick-and-morty-api-75fd9.web.app/])](https://rick-and-morty-api-75fd9.web.app/)
 
 Sobre...
 
