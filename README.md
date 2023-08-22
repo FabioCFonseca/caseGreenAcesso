@@ -7,7 +7,15 @@ https://..****
 Sobre...
 
 ## Layout mobile
-![Capturar](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/cb6313e9-352d-4cb0-9249-1f8da6b86736)
+# Home page
+![home1](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/60c931cd-38a5-4127-b7e8-45c0d8c5ef62)
+![home2](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/21044901-0ad7-401a-8cac-ca51878c15c1)
+
+# Favorites page
+![favorites](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/d7d1ee39-dc27-414a-89ae-20391da7c21e)
+
+# Details page
+![details](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/ea99dc14-b58e-46c7-8ce9-bae376e257e8)
 
 ## Layout web
 ![Capturar](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/fed0f580-e8ca-4f8d-aa04-05b2c18a7efc)
