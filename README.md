@@ -8,8 +8,8 @@ Sobre...
 
 ## Layout mobile
 # Home page
-![home1](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/60c931cd-38a5-4127-b7e8-45c0d8c5ef62)
-![home2](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/21044901-0ad7-401a-8cac-ca51878c15c1)
+![home1](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/2be401c8-8df0-477c-affc-0432c84ae78d)
+
 
 # Favorites page
 ![favorites](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/d7d1ee39-dc27-414a-89ae-20391da7c21e)
