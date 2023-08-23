@@ -26,7 +26,7 @@ const Button = styled.button`
 const Pagination = ({ data, currentPage, handlePageChange }) => {
   const itemsPerPage = 6;
   const totalPages = Math.ceil(data.length / itemsPerPage);
-  const displayRange = 2;
+  const displayRange = 1;
 
   const startIndex = Math.max(0, currentPage - displayRange - 1);
   const endIndex = Math.min(totalPages - 1, currentPage + displayRange - 1);

@@ -2,16 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TableWrapper = styled.div`
-  width: inherit;
-  margin: 50px auto;
+  margin: 0;
+  width: 80%;
 `;
 
 const StyledTable = styled.table`
-  margin: 0 auto;
-  width: 70%;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 100%;
 `;
 
 const StyledTableRow = styled.tr`
@@ -23,22 +21,17 @@ const StyledTableRow = styled.tr`
     background-color: #407772;
   }
 
+  width: 100%;  
   color: white;
 `;
 
 const StyledTableData = styled.td`
   padding: 8px;
   border: 1px solid #ddd;
+  text-align: center;
+  
 `;
 
-const StyledText = styled.span`
-  color: blue;
-  text-decoration: underline;
-
-  &:hover {
-    text-decoration: none;
-  }
-`;
 
 const StyledImage = styled.img`
   display: block;

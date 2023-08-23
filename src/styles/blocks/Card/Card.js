@@ -33,6 +33,8 @@ const CardBody = styled.div`
   position: relative;
   height: 200px;
   background-color: var(--secondaryBlue);
+  text-align: center;
+  padding: 0 10px;
 `;
 
 const Image = styled.img`
@@ -44,6 +46,10 @@ const Image = styled.img`
   top: -75px;
   left: 50%;
   transform: translateX(-50%);
+`;
+
+const NameText = styled.h2`
+  margin-top: 30px; 
 `;
 
 const Button = styled(Link)`
@@ -95,6 +101,7 @@ const ListTitle = styled.div`
 
   @media (max-width: 480px) {
     padding: 0px 40px;
+    margin-top: 30px;
   }
 `;
 
@@ -103,6 +110,10 @@ const HorizontalLine = styled.div`
   height: 1px;
   background-color: #ccc;
   margin-left: 10px;
+
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const Card = ({ paginatedData, pageReference }) => {
@@ -130,7 +141,7 @@ const Card = ({ paginatedData, pageReference }) => {
         {paginatedData.map((item) => (
           <CardBody key={item.id}>
             <Image src={item.image} />
-            <h2>{item.name}</h2>
+            <NameText>{item.name}</NameText>
             <Button to={`/details/${item.id}`}>Details</Button>
             <HeartIcon
               onClick={() => handleFavorite(item)}

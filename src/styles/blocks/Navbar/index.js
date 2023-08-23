@@ -27,15 +27,21 @@ const FavoritesButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
-  color: #000;
+  background-color: transparent; /* Remove background color */
+  color: #fff; /* Text color */
   padding: 8px 8px;
-  border: none;
+  border: 2px solid #fff; /* Add border */
   border-radius: 4px;
   text-decoration: none;
   font-size: 14px;
   cursor: pointer;
   height: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for hover effect */
+
+  &:hover {
+    background-color: #fff; /* Change background color on hover */
+    color: #000; /* Change text color on hover */
+  }
 `;
 
 const ButtonsWrapper = styled.div`
