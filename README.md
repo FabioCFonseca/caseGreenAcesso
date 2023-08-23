@@ -1,18 +1,36 @@
-# Rick and Morty API 
+# Rick and Morty API
 
-# Sobre o projeto
+## Sobre o projeto
 
-https://..****
+[Rick and Morty API](https://rick-and-morty-api-75fd9.web.app/)
 
 Sobre...
 
 ## Layout mobile
-![Capturar](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/cb6313e9-352d-4cb0-9249-1f8da6b86736)
+
+# Home page
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/2be401c8-8df0-477c-affc-0432c84ae78d" alt="home1" width="45%">
+  <img src="https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/71d7eeff-35cf-4a34-b6da-60160ee762f9" alt="home2" width="45%">
+</div>
+
+# Favorites page
+![favorites](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/427b536a-f97e-4dbb-af61-679b9700f466)
+
+# Details page
+![details](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/73dacbe5-b7e1-456d-a236-a89ce7cef564)
 
 ## Layout web
-![Capturar](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/fed0f580-e8ca-4f8d-aa04-05b2c18a7efc)
 
-![Capturar](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/0f5d0f62-3f51-41ad-817a-d9e3bad32d41)
+# Home page
+![webHome](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/ce1d94cc-7cb8-49bb-a5b6-8705497e7c24)
+
+# Favorites page
+![webFavorites](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/c07f15e5-0c1d-4ab4-b27d-f82da4b6e016)
+
+# Details page
+![webDetails](https://github.com/FabioCFonseca/caseGreenAcesso/assets/108895922/406755f4-43c3-4479-bb60-cbda9fe27b8d)
+
 
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
