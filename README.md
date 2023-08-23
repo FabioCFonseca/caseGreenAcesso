@@ -4,7 +4,11 @@
 
 [Rick and Morty API](https://rick-and-morty-api-75fd9.web.app/)
 
-Sobre...
+Aplicação responsiva para consumo e display de dados de API externa
+
+Backend desenvolvido com Firebase e Github Actions para pipeline CI/CD
+
+Gerenciamento de estados com Redux e UI desenvolvida com Styled Components e UX melhorada através das features de paginação e filtro de busca
 
 ## Layout mobile
 
