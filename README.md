@@ -4,7 +4,11 @@
 
 [Rick and Morty API](https://rick-and-morty-api-75fd9.web.app/)
 
-Sobre...
+Aplicação responsiva para consumo e display de dados de API externa
+
+Backend desenvolvido com Firebase e Github Actions para pipeline CI/CD
+
+Gerenciamento de estados com Redux e UI desenvolvida com Styled Components e UX melhorada através das features de paginação e filtro de busca
 
 ## Layout mobile
 
@@ -33,54 +37,24 @@ Sobre...
 
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+Em construção...
 
 # Tecnologias utilizadas
 ## Back end
-***
+- Firebase hosting
+- Github Actions
 ## Front end
-- HTML / CSS / JS / TypeScript
 - ReactJS
+- Redux
+- React Query
+- Styled Components
 ## Implantação em produção
-- Back end: Heroku
-- Front end web: Netlify
-- Banco de dados: Postgresql
-
+- Back end: Firebase
+- Front end web: Firebase hosting e Github Actions
+  
 # Como executar o projeto
-
-## Back end
-Pré-requisitos: Java 11
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto back end
-cd backend
-
-# executar o projeto
-./mvnw spring-boot:run
-```
-
-## Front end web
-Pré-requisitos: npm / yarn
-
-```bash
-# clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
-
-# entrar na pasta do projeto front end web
-cd front-web
-
-# instalar dependências
-yarn install
-
-# executar o projeto
-yarn start
-```
+Em construção...
 
 # Autor
-
 Fabio de Carvalho Fonseca
-
-https://www.linkedin.com/***
+[Linkedin](https://www.linkedin.com/in/fabiocfonseca/)
