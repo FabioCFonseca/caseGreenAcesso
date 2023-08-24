@@ -17,7 +17,7 @@ const Details = () => {
   const { data, isLoading, isError } = useCharacters();
 
   if (isLoading) {
-    return <div>Loading....</div>;
+    return <div>Loading...</div>;
   }
 
   if (isError) {
