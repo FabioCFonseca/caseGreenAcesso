@@ -1,15 +1,14 @@
-import React from 'react';
 import styled from 'styled-components';
-import { useCharacters } from './service/api';
+import { useCharacters } from '../service/api';
 import { useParams } from 'react-router-dom';
-import CharacterDetails from './styles/blocks/Table';
+import CharacterDetails from '../components/CharacterDetails';
 
 const CenteredWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; 
+  min-height: 100vh;
   text-align: center;
 `;
 
@@ -33,8 +32,8 @@ const Details = () => {
 
   return (
     <CenteredWrapper>
-        <h1>Character details</h1>
-        <CharacterDetails character={character} />
+      <h1>Character details</h1>
+      <CharacterDetails character={character} />
     </CenteredWrapper>
   );
 };

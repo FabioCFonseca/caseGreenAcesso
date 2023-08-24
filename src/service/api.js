@@ -15,10 +15,10 @@ export const fetchData = async () => {
     }
   }
   return responseData;
-}
+};
 
 export const useCharacters = () => {
-    return useQuery('Characters', fetchData, {
-        staleTime: 600000, // 10 minutes (in milliseconds)
-      })
-  }
+  return useQuery('Characters', fetchData, {
+    staleTime: 600000, // 10 minutes (in milliseconds)
+  });
+};

@@ -1,5 +1,4 @@
-import React from 'react'
-import Card from './styles/blocks/Card/Card';
+import Card from '../components/Card';
 import { useSelector } from 'react-redux';
 
 const Favorites = () => {
