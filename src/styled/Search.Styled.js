@@ -29,5 +29,6 @@ export const SearchIcon = styled(AiOutlineSearch)`
   right: 10px; 
   transform: translateY(-50%);
   color: lightgrey;
-  pointer-events: none; 
-`;
+  pointer-events: none;
+`
+SearchIcon.displayName = 'SearchIcon';
