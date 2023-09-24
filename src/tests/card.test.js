@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Card from '../components/Card'; 
+import Card from '../components/Card';
 
-test('renders Card component correctly', () => {
+describe('Card component', () => {
   const mockData = [
     {
       id: 1,
@@ -16,20 +16,26 @@ test('renders Card component correctly', () => {
     },
   ];
 
-  const { getByText, getAllByText, getByAltText } = render(
-    <Card paginatedData={mockData} pageReference="Characters" />
-  );
+  let component;
 
-  const listTitle = getByText('List of Characters');
-  expect(listTitle).toBeInTheDocument();
+  beforeEach(() => {
+    component = render(<Card paginatedData={mockData} pageReference="Characters" />);
+  });
 
-  for (const item of mockData) {
-    const characterName = getByText(item.name);
-    const detailsButton = getByText('Details', { selector: 'a' }); 
-    const characterImage = getByAltText(item.name);
+  it('renders list title correctly', () => {
+    const listTitle = component.getByText('List of Characters');
+    expect(listTitle).toBeInTheDocument();
+  });
 
-    expect(characterName).toBeInTheDocument();
-    expect(detailsButton).toBeInTheDocument();
-    expect(characterImage).toBeInTheDocument();
-  }
+  it('renders characters correctly', () => {
+    for (const item of mockData) {
+      const characterName = component.getByText(item.name);
+      const detailsButton = component.getByText('Details', { selector: 'a' });
+      const characterImage = component.getByAltText(item.name);
+
+      expect(characterName).toBeInTheDocument();
+      expect(detailsButton).toBeInTheDocument();
+      expect(characterImage).toBeInTheDocument();
+    }
+  });
 });
